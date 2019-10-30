@@ -61,7 +61,7 @@ Output:
 
 ## Drawing a line
 
-To draw a line, all we need is to call the drawLine() function from the art::Image object, so let's draw a simple line:
+To draw a line, all we need is to call the ```art::Image::cppdrawLine()``` function, passing the line start point x1,y1 and the line ending point x2,y2:
 
 ```cpp
 #include "include/Art/Art.h"
