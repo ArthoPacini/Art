@@ -61,7 +61,7 @@ Output:
 
 ## Drawing a line
 
-To draw a line, all we need is to call the ```art::Image::cppdrawLine()``` function, passing the line start point x1,y1 and the line ending point x2,y2:
+To draw a line, all we need is to call the ```art::Image::drawLine()``` function, passing the line start point x1,y1 and the line ending point x2,y2:
 
 ```cpp
 #include "include/Art/Art.h"
@@ -83,4 +83,26 @@ int main()
 
 ![draw line 0](https://i.imgur.com/Rjwaoee.png)
 
+Note that the default color is white.
+You may also specify a custom color, passing it on the last argument:
+
+```cpp
+#include "include/Art/Art.h"
+
+int main()
+{
+    //Creates a image object with 2048 width and 2048 height
+    //With a black background
+    auto image = art::Image<art::Vec3<std::uint8_t>>(512, 512);
+
+    //                                x,y       x , y
+    //Draws a white line, from point (0,0) to (100,100)
+    image.drawLine(0, 0, 100, 100);
+
+    //Saves image
+    image.writeImage("output.bmp");
+}
+```
+
+![draw line 0](https://i.imgur.com/5cJ2cGj.png)
 
