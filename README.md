@@ -95,9 +95,11 @@ int main()
     //With a black background
     auto image = art::Image<art::Vec3<std::uint8_t>>(512, 512);
 
+    const auto drawingColor = art::Vec3<std::uint8_t>(130, 20, 95);
+
     //                                x,y       x , y
     //Draws a white line, from point (0,0) to (100,100)
-    image.drawLine(0, 0, 100, 100);
+    image.drawLine(0, 0, 100, 100, drawingColor);
 
     //Saves image
     image.writeImage("output.bmp");
