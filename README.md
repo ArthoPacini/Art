@@ -3,9 +3,18 @@ Art is a simple C++ graphical library
 
 # Documentation
 
-## art::Image
+## Integration
 
-The art::Image object is the main object that holds image data
+[`Art.h`](https://https://github.com/ArthoPacini/Art/blob/master/Art/include/Art/Art.h) is the single required file to include. You need to add
+
+```cpp
+#include "include/Art/Art.h"
+```
+to the files you want to process images. is necessary to enable C++17 on compile (e.g., -std=c++17 for GCC and Clang).
+
+## Examples
+
+The following examples cover all of the Art library usage
 
 ### Creating an image and saving it
 
@@ -22,7 +31,7 @@ int main()
 }
 ```
 
-Compile it with your favorite compiler, example:
+Compile it, example:
 ```bash
 g++ main.cpp -o main -std=c++17
 ```
