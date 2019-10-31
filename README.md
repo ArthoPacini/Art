@@ -14,7 +14,7 @@ to the files you want to process images. is necessary to enable C++17 on compile
 
 ## Examples
 
-The following examples cover all of the Art library usage
+The following examples cover the Art library usage
 
 ### Creating an image and saving it
 
@@ -32,6 +32,7 @@ int main()
 ```
 
 Compile it:
+
 ```bash
 g++ main.cpp -o main -std=c++17
 ```
@@ -70,7 +71,19 @@ Output:
 
 ## Drawing a line
 
-To draw a line, all we need is to call the ```cpp art::Image::drawLine()``` function, passing the line start point x1,y1 and the line ending point x2,y2:
+To draw a line, all we need is to call the ```art::Image::drawLine()``` function.
+This function need 2 x,y coordinates, the first one defines the starting point of the line, and the second one defines the ending point. You may also pass an optional parameter to define the color of the line, the default color is white.
+
+This function has 2 overloads:
+```cpp
+void drawLine(const std::int64_t x, const std::int64_t y, const std::int64_t x2, const std::int64_t y2, const T color = T(std::numeric_limits<T>::max()))
+```
+and
+```cpp
+drawLine(art::Vec2<std::int64_t> p1, art::Vec2<std::int64_t> p2, const T color = T(std::numeric_limits<T>::max()))
+```
+
+An usage example:
 
 ```cpp
 #include "include/Art/Art.h"
