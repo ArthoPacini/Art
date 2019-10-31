@@ -31,7 +31,7 @@ int main()
 }
 ```
 
-Compile it, example:
+Compile it:
 ```bash
 g++ main.cpp -o main -std=c++17
 ```
@@ -70,7 +70,7 @@ Output:
 
 ## Drawing a line
 
-To draw a line, all we need is to call the ```art::Image::drawLine()``` function, passing the line start point x1,y1 and the line ending point x2,y2:
+To draw a line, all we need is to call the ```cpp art::Image::drawLine()``` function, passing the line start point x1,y1 and the line ending point x2,y2:
 
 ```cpp
 #include "include/Art/Art.h"
